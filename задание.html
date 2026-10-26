@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КТ 4. Кофейня «Зерно» — задание</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #FBF7F2; color: #241A10; margin: 0; line-height: 1.6; }
+  header { background: #3B2A1E; color: #fff; padding: 36px 20px; }
+  header .wrap, .wrap { max-width: 960px; margin: 0 auto; }
+  header .sub { color: #F0C48C; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+  header h1 { margin: 8px 0 4px; font-size: 32px; }
+  header p { color: #D9C4AC; margin: 0; }
+  main.wrap { padding: 20px 20px 60px; }
+  h2 { color: #B4713A; border-bottom: 2px solid #B4713A; padding-bottom: 6px; margin-top: 40px; }
+  code.tag { background: #F5E3D0; color: #B34A10; padding: 1px 6px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.92em; }
+  pre { background: #2A1E12; color: #F5E3D0; padding: 16px; border-radius: 10px; overflow-x: auto; font-family: Consolas, monospace; font-size: 14px; line-height: 1.5; margin: 12px 0; }
+  .note { background: #fff; border-left: 5px solid #F0C48C; border-radius: 8px; padding: 12px 18px; margin: 18px 0; color: #57432E; }
+  .note b { color: #B4713A; }
+  .mockup { background: #fff; border: 1px solid #D9C8B4; border-radius: 12px; padding: 18px; margin: 12px 0; text-align: center; }
+  .mockup img { max-width: 360px; width: 100%; border: 1px solid #D9C8B4; border-radius: 8px; }
+  footer { background: #3B2A1E; color: #B09A82; text-align: center; padding: 20px; font-size: 14px; }
+  a { color: #B4713A; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="sub">КТ 4 · Вариант 1</div>
+    <h1>Кофейня «Зерно»</h1>
+    <p>Десктопная версия: <a href="index.html" style="color:#F0C48C">index.html</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h2>Макет мобильной версии</h2>
+<p>Файл <code class="tag">макет-мобильный.jpg</code> лежит в этой же папке. Сверстать нужно <b>примерно</b> по макету: тот же порядок блоков и общая структура, точные размеры не проверяются.</p>
+<div class="mockup">
+  <img src="макет-мобильный.jpg" alt="Макет мобильной версии сайта кофейни">
+</div>
+
+<h2>Рекомендации по мобильной версии</h2>
+<ol>
+  <li><b>Шапка.</b> Логотип по центру, пункты меню столбиком под ним по центру. У <code class="tag">.header-inner</code> поменять направление: <code class="tag">flex-direction: column</code>. У ссылок <code class="tag">.nav a</code> убрать левый отступ и задать отступ снизу.</li>
+  <li><b>Первый экран.</b> Заголовок уменьшить примерно до 28–30 px (<code class="tag">.hero h1</code>), вертикальные отступы секции сократить до 70–90 px. Кнопку растянуть на всю ширину контента: <code class="tag">display: block; text-align: center</code>.</li>
+  <li><b>Меню.</b> Карточки в один столбец: у <code class="tag">.cards</code> — <code class="tag">flex-direction: column</code>, у <code class="tag">.card</code> — <code class="tag">width: 100%</code>.</li>
+  <li><b>О нас.</b> Колонки друг под другом: <code class="tag">.about { flex-direction: column }</code>, у <code class="tag">.about-img</code> и <code class="tag">.about-text</code> задать <code class="tag">width: 100%</code>. Фотография сверху, текст под ней.</li>
+  <li><b>Подвал.</b> Колонки столбиком по центру: <code class="tag">.footer-inner { flex-direction: column; text-align: center }</code>.</li>
+</ol>
+
+<div class="note">
+  <b>Подсказка:</b> все переопределения добавляются в конец <code class="tag">css/style.css</code> внутри <code class="tag">@media (max-width: 768px) { ... }</code>. Десктопные правила выше не трогаем.
+</div>
+
+<h2>Проверка</h2>
+<ul>
+  <li>DevTools → Toggle device toolbar (Ctrl+Shift+M), ширина 375 px.</li>
+  <li>Горизонтальной прокрутки нет.</li>
+  <li>Порядок блоков совпадает с макетом: шапка → первый экран → меню → о нас → подвал.</li>
+</ul>
+
+</main>
+
+<footer>Основы HTML/CSS · КТ 4 · Кофейня «Зерно»</footer>
+
+</body>
+</html>
